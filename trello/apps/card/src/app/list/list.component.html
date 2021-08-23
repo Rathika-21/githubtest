@@ -1,0 +1,24 @@
+sdfsdfsdfsd sddf
+<div class="container">
+    <div class="content-addcard">
+        <input type="text" [formControl]="addtask" />
+        <button (click)="add()" class="ml-2">Add List</button>
+    </div>
+    <div id="content">
+        <div class="contentInside" *ngFor="let container of taskList; let i=index;"> 
+            <h4 class="text-center">{{container.title}}</h4>
+            <div class="contentcard"  class="ml-1" >
+                <input type="text" [formControl]="addlist" style="width: 78%;"/>
+                <button (click)="addcard(container.title)" class="ml-1">Add</button>
+                <div class="sss" *ngFor="let item of container[container.title]; let i=index;">
+                    <div class="shadow-sm bg-white rounded my-2 ml-1 mr-1">
+                        {{item}}
+                    </div>
+                </div>
+            </div>
+        <div><hr/>
+       
+    </div>
+</div>
+    
+        
